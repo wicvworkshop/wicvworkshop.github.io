@@ -30,7 +30,7 @@
  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
  */
 
-/*********************************************************************************/
+/*********************************************************************************
 Colors
 
 004c7d blue
@@ -38,7 +38,7 @@ Colors
 
 c78812 gold
 f5a716 gold highlight
-/*********************************************************************************/
+*********************************************************************************/
 
 /*********************************************************************************/
 /* Basic                                                                         */
@@ -46,7 +46,7 @@ f5a716 gold highlight
 
 body
 {
-    background: #f0f0f0;
+    background: #fff; //f0f0f0;
 }
 
 body,input,textarea,select
@@ -72,7 +72,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 
 a
 {
-    color: #004c7d;
+    color: #3288c6; /* link color*/
     text-decoration: none;
     //border-bottom: solid 1px #ddd;
     //-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
@@ -92,7 +92,11 @@ a strong
     transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 }
 
-a:hover,
+a:hover
+{
+    color: #005593; /* link hover color*/
+    border-bottom-color: rgba(225,225,225,0);
+}
 a:focus
 {
     //color: #c78812;
@@ -184,29 +188,30 @@ article:last-child
 {
     display: inline-block;
     //border: solid 6px #ebebeb !important;
-    //-moz-transition: border 0.25s ease-in-out;
-    //-webkit-transition: border 0.25s ease-in-out;
-    //-o-transition: border 0.25s ease-in-out;
-    //-ms-transition: border 0.25s ease-in-out;
-    //transition: border 0.25s ease-in-out;
+    -moz-transition: border 0.25s ease-in-out;
+    -webkit-transition: border 0.25s ease-in-out;
+    -o-transition: border 0.25s ease-in-out;
+    -ms-transition: border 0.25s ease-in-out;
+    transition: border 0.25s ease-in-out;
 }
 
 a.image:hover img,
 a.image:focus img
 {
     opacity: 1;
+    border: solid 6px #66a6d4;
 }
 
 .image img
 {
     display: block;
     width: 100%;
-    //opacity: 0.9;
-    //-moz-transition: opacity 0.25s ease-in-out;
-    //-webkit-transition: opacity 0.25s ease-in-out;
-    //-o-transition: opacity 0.25s ease-in-out;
-    //-ms-transition: opacity 0.25s ease-in-out;
-    //transition: opacity 0.25s ease-in-out;
+    opacity: 0.9;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .image-full
@@ -234,6 +239,7 @@ a.image:focus img
 {
     margin: 0 auto;
     width: auto;
+    border: solid 6px #ebebeb;
 }
 
 /* Lists */
@@ -332,6 +338,38 @@ ul.icons > li:first-child:before
 {
     top: 0;
 }
+
+ul.icons1 {
+    cursor: default;
+}
+
+ul.icons1 li {
+    display: inline-block;
+    font-size: 3em;
+    line-height: 1em;
+    padding-left: 0em;
+}
+
+ul.icons1 li a, ul.icons li span {
+				-moz-transition: background-color 0.2s ease-in-out;
+                -webkit-transition: background-color 0.2s ease-in-out;
+                -o-transition: background-color 0.2s ease-in-out;
+                -ms-transition: background-color 0.2s ease-in-out;
+                transition: background-color 0.2s ease-in-out;
+                border-radius: 100%;
+                border: solid 1px rgba(224, 224, 224, 0.75);
+                display: inline-block;
+                height: 2em;
+                line-height: 2em;
+                text-align: center;
+                width: 2em;
+}
+
+ul.icons1 li a:hover, ul.icons li span:hover {
+    background: rgba(224, 224, 224, 0.15);
+}
+
+
 
 ol.style1
 {
@@ -975,7 +1013,7 @@ table.style1 tbody
     overflow: hidden;
     background: #fff;
     color: #fff;
-    background-image: url("../images/honolulu_banner.jpg");
+    background-image: url("../images/honolulu_banner_v2.jpg");
     background-repeat: no-repeat;
     text-align: center;
 }
@@ -989,6 +1027,11 @@ table.style1 tbody
 .banner-wrapper p
 {
     text-align: center;
+}
+
+.banner-wrapper h2
+{
+    font-weight: bold;
 }
 
 .features-wrapper
@@ -1016,7 +1059,8 @@ table.style1 tbody
     position: relative;
     overflow: hidden;
     border-top: solid 2px #e5e5e5;
-    background: #f0f0f0;
+    background: #101010; //fff; //f0f0f0;
+    margin-top: 10em;
 }
 
 #footer-wrapper form input.text,
@@ -1043,6 +1087,22 @@ table.style1 tbody
     text-align: center;
 }
 
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 0px;
+  border-top: solid 2px #e5e5e5;
+  background: #101010; //fff; //f0f0f0;
+  margin-top: 10em;
+  /*padding:20px 0px;
+  color:#ffffff;
+  background-color:#252525;*/
+}
+.footer p {
+  text-align:center;
+  margin-bottom:10px;
+}
+
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
@@ -1062,7 +1122,7 @@ table.style1 tbody
     font-family: 'kingluau';
     font-weight: 700;
     line-height: 1.3333;
-    color: #006bb8;
+    color: #004c7d;
     text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
 
 }
@@ -1075,7 +1135,7 @@ table.style1 tbody
 #header h1 a:hover,
 #header h1 a:focus
 {
-    color: #006bb8;
+    color: #66a6d4;
 }
 
 #header p
@@ -1162,6 +1222,7 @@ table.style1 tbody
 #nav > ul > li:focus > a > span
 {
     color: #004c7d;
+    font-weight: bolder;
 }
 
 #nav > ul > li.active
@@ -1223,7 +1284,9 @@ table.style1 tbody
 .gallery a:hover,
 .gallery a:focus
 {
-    //border: solid 6px #f5a716 !important;
+   width: 230px;
+   position: right;
+   border: solid 6px #66a6d4 !important;
 }
 
 .gallery img
@@ -1436,7 +1499,7 @@ table.style1 tbody
 
 #slides a:link, #slides a:visited { color: #333 }
 
-#slides a:hover, #slides a:active { color: #9e2020 }
+#slides a:hover, #slides a:active { color: #66a6d4}
 
 #index_navs a {
     color: rgb(85, 85, 85);
@@ -1479,3 +1542,56 @@ table.style1 tbody
 .student-entry:hover .student-interest-short {
     visibility: hidden;
 }
+
+/*******************
+ * faq accordion
+ * ****************/
+/* Style the element that is used to open and close the accordion class */
+p.accordion {
+   background-color: #F0F8FF;
+   color: #444;
+   cursor: pointer;
+   padding: 18px;
+   width: 70%;
+   text-align: left;
+   border: none;
+   outline: none;
+   transition: 0.4s;
+   margin-bottom:10px;
+   margin-left:15%;
+   margin-right:20px;
+}
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+   background-color: #ddd;
+}
+           /* Unicode character for "plus" sign (+) */
+           p.accordion:after {
+              content: '\2795';
+               font-size: 13px;
+                color: #777;
+                 float: left; /* here's where you set it to right or left of the text.. */
+                  margin-left: 5px;
+                  margin-right: 10px;
+                }
+                /* Unicode character for "minus" sign (-) */
+                p.accordion.active:after {
+                   content: "\2796";
+                 }
+                 /* Style the element that is used for the panel class */
+                 div.panel {
+                    padding: 0 18px;
+                    text-align: left;
+                    width: 70%;
+                    margin-left:15%;
+                     background-color: white;
+                      max-height: 0;
+                       overflow: hidden;
+                        transition: 0.4s ease-in-out;
+                         opacity: 0;
+                          margin-bottom:10px;
+                        }
+                        div.panel.show {
+                           opacity: 1;
+                            max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+                          }
