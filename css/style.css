@@ -242,6 +242,41 @@ a.image:focus img
     border: solid 6px #ebebeb;
 }
 
+.image-logo
+{
+    display: inline-block;
+    //border: solid 6px #ebebeb !important;
+    -moz-transition: border 0.25s ease-in-out;
+    -webkit-transition: border 0.25s ease-in-out;
+    -o-transition: border 0.25s ease-in-out;
+    -ms-transition: border 0.25s ease-in-out;
+    transition: border 0.25s ease-in-out;
+}
+
+a.image-logo:hover img,
+a.image-logo:focus img
+{
+    opacity: 1;
+}
+
+.image-logo img
+{
+    display: block;
+    width: 100%;
+    opacity: 0.75;
+    -moz-transition: opacity 0.25s ease-in-out;
+    -webkit-transition: opacity 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.image-centered-logo img
+{
+    margin: 0 auto;
+    width: auto;
+}
+
 /* Lists */
 
 ul.style1
@@ -1595,3 +1630,24 @@ p.accordion.active, p.accordion:hover {
                            opacity: 1;
                             max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
                           }
+
+.divider {
+    width:auto;
+    text-align:center;
+}
+
+.divider hr {
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float:right;
+}
+
