@@ -44,6 +44,12 @@ f5a716 gold highlight
 /* Basic                                                                         */
 /*********************************************************************************/
 
+@font-face {
+    font-family: 'dejaweb';
+    src: url('../fonts/DejaWeb.ttf');
+}
+
+
 body
 {
     background: #fff; //f0f0f0;
@@ -52,7 +58,7 @@ body
 body,input,textarea,select
 {
     /*font-family: 'Source Sans Pro';*/
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'dejaweb';
     font-weight: 300;
     color: #555;
 }
