@@ -1590,10 +1590,10 @@ table.style1 tbody
  * ****************/
 /* Style the element that is used to open and close the accordion class */
 p.accordion {
-   background-color: #F0F8FF;
+   background-color: #FFF; /*#F0F8FF;*/
    color: #444;
    cursor: pointer;
-   padding: 18px;
+   padding: 2px;
    width: 70%;
    text-align: left;
    border: none;
