@@ -32,6 +32,52 @@
                 <link rel="stylesheet" href="css/style-desktop.css" />
                 <link rel="stylesheet" href="css/skel-noscript.css" />
             </noscript>
+        
+        <style>
+        
+        /* Style the tab */
+        div.tab {
+            margin: auto;
+            width: 75%;
+            padding: 0px 12px; 
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        
+        /* Style the buttons inside the tab */
+        div.tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+            background-color: #ddd;
+        }
+        
+        /* Create an active/current tablink class */
+        div.tab button.active {
+            background-color: #ccc;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+            margin: auto;
+            width: 75%;
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        </style>
+
             </head>
     <body class="homepage">
         <!-- Header Wrapper -->
@@ -106,33 +152,85 @@
         </div>
         <div class="features-wrapper">
                   
-        <p><strong>*Tentative schedule is here. We are still finalizing the exact time slots. Please check back this page for updates.* </strong></p>
-        <h3 style="margin: 0px 0px 20px 40px;text-align:left;">Main Workshop: All are very invited</h3>  
+        <p><strong>*Check back later for the final schedule.* </strong></p>
 
-        <p style="margin: 0px 0px 20px 40px;text-align:left;">                      
-                1:30 -- 1:40 pm &emsp;&emsp;Introduction <br>
-                1:40 -- 2:00 pm &emsp;&emsp;<b>Keynote</b> by <a href="http://thoth.inrialpes.fr/~schmid/">Cordelia Schmid, INRIA</a> <br>
-                2:00 -- 2:30 pm &emsp;&emsp;Oral Session 1<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 1 TBA<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 2 TBA<br>
-                2:30 -- 2:50 pm &emsp;&emsp;<b>Keynote</b> by <a href="http://www.xrce.xerox.com/About-XRCE/People/Naila-Murray">Naila Murray, XRCE</a><br>
-                2:50 -- 4:00 pm &emsp;&emsp;<b>Poster session</b> and afternoon break <br>
-                4:00 -- 4:20 pm &emsp;&emsp;<b>Keynote</b> TBA  <br>
-                4:20 -- 4:50 pm &emsp;&emsp;Oral Session 2 <br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 3 TBA<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 4 TBA<br>
-                4:50 -- 5:20 pm &emsp;&emsp;<b>Panel session</b> (participants: TBA) <br>
-                5:20 -- 5:30 pm &emsp;&emsp;Closing Remarks <br>
-        </p>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Schedule')" id="defaultOpen">Schedule</button>
+          <button class="tablinks" onclick="openCity(event, 'Talks')">Talks</button>
+          <button class="tablinks" onclick="openCity(event, 'Panel')">Panel</button>
+          <button class="tablinks" onclick="openCity(event, 'Orals')">Orals</button>
+          <button class="tablinks" onclick="openCity(event, 'Posters')">Posters</button>
+          <button class="tablinks" onclick="openCity(event, 'Dinner')">Dinner</button>
+        </div>
+        
+        <div id="Schedule" class="tabcontent">
+          <h3>Schedule</h3>
+          <h5>tentative</h5>
+          <p style="margin: 0px 0px 20px 40px;text-align:left;">
+                July 26&emsp;&emsp;1:30 - 1:40 pm &emsp;&emsp;Introduction <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;1:40 - 2:00 pm &emsp;&emsp;<b>Keynote</b> by <a href="http://thoth.inrialpes.fr/~schmid/">Cordelia Schmid, INRIA</a> <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;2:00 - 2:30 pm &emsp;&emsp;Oral Session 1<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 1 TBA<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 2 TBA<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;2:30 - 2:50 pm &emsp;&emsp;<b>Keynote</b> by <a href="http://www.xrce.xerox.com/About-XRCE/People/Naila-Murray">Naila Murray, XRCE</a><br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;2:50 - 4:00 pm &emsp;&emsp;<b>Poster session</b> and afternoon break <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;4:00 - 4:20 pm &emsp;&emsp;<b>Keynote</b> TBA  <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;4:20 - 4:50 pm &emsp;&emsp;Oral Session 2 <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 3 TBA<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Speaker 4 TBA<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;4:50 - 5:20 pm &emsp;&emsp;<b>Panel session</b> (participants: TBA) <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;5:20 - 5:30 pm &emsp;&emsp;Closing Remarks <br>
+          </p>
 
-        <h3 style="margin: 0px 0px 20px 40px;text-align:left;">Mentoring Dinner: by invitation</h3>  
+        </div>
+        
+        <div id="Talks" class="tabcontent">
+          <h3>Keynote Talks</h3>
+          <p>Keynote speakers will give technical talks about their research in computer vision. Details coming soon!</p> 
+        </div>
+        
+        <div id="Panel" class="tabcontent">
+          <h3>Panel</h3>
+          <p>Details coming soon!</p>
+        </div>
 
-        <p style="margin: 0px 0px 20px 40px;text-align:left;">                      
-                6:30 -- 9:30 pm &emsp;&emsp;Dinner sponsored by NVIDIA (details TBA) <br>
-        </p>
+        <div id="Orals" class="tabcontent">
+          <h3>Orals</h3>
+          <p>A few accepted abstracts will be invited to give an oral presentation. We will add presenter instructions soon. Details coming soon!</p>
+        </div>
 
+        <div id="Posters" class="tabcontent">
+          <h3>Posters</h3>
+          <p>Authors of all accepted abstracts (with or without travel grant) will present their work in a poster session. We will add presenter instructions soon. Details coming soon!</p>
+        </div>
 
-          <br><br><br><br><br><br><br><br><br><br><br> 
+        <div id="Dinner" class="tabcontent">
+          <h3>Mentoring dinner</h3>
+          <p>by invitation only</p>
+          <p>July 25   6:30 - 9:30 pm   Dinner sponsored by NVIDIA (details TBA)</p>
+          <p align="left";>The dinner event is an opportunity to meet other female computer vision researchers. Poster presenters will be matched with senior computer vision researchers to share experience and career advice. Invitees will receive an e-mail and be asked to confirm attendance.</p>
+        </div>
+
+        <script>
+           function openCity(evt, cityName) {
+               var i, tabcontent, tablinks;
+               tabcontent = document.getElementsByClassName("tabcontent");
+               for (i = 0; i < tabcontent.length; i++) {
+                   tabcontent[i].style.display = "none";
+               }
+               tablinks = document.getElementsByClassName("tablinks");
+               for (i = 0; i < tablinks.length; i++) {
+                   tablinks[i].className = tablinks[i].className.replace(" active", "");
+               }
+               document.getElementById(cityName).style.display = "block";
+               evt.currentTarget.className += " active";
+           }
+           
+           // Get the element with id="defaultOpen" and click on it
+           document.getElementById("defaultOpen").click();
+        </script>
+
+          <br><br><br><br><br> 
         </div>
         <!-- Footer Wrapper -->
         <div class="footer">
