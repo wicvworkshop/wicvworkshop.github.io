@@ -1050,8 +1050,7 @@ table.style1 tbody
 }
 
 .banner-wrapper
-{
-    background-position: 50% 0%;
+{   
     position: relative;
     overflow: hidden;
     background: #fff;
@@ -1059,6 +1058,7 @@ table.style1 tbody
     background-image: url("../images/SLC2.jpg");
     background-repeat: no-repeat;
     text-align: center;
+    background-position: 50% 0%;
 }
 
 .banner-wrapper .inner
