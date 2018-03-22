@@ -1051,6 +1051,7 @@ table.style1 tbody
 
 .banner-wrapper
 {
+    background-position: 50% 0%;
     position: relative;
     overflow: hidden;
     background: #fff;
@@ -1355,7 +1356,7 @@ table.style1 tbody
 .banner h2
 {
     color: inherit;
-    text-align: left;
+    text-align: center;
 }
 
 .banner p
