@@ -244,7 +244,7 @@ a.image:focus img
 
 .image-centered img
 {
-    margin: 0 0;
+    margin: 0 auto;
     width: auto;
     border: solid 6px #ebebeb;
 }
